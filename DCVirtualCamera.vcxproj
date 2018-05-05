@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{03E04D97-050E-464E-899F-26AB61D6A0EE}</ProjectGuid>
+    <RootNamespace>PushSource</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectName>DCVirtualCamera</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <CLRSupport>false</CLRSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <CLRSupport>false</CLRSupport>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.60610.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>c:\Program Files\Microsoft SDKs\Windows\v7.1\Samples\multimedia\directshow\baseclasses;c:\DevDrive\ffmpeglib\include;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <LibraryPath>C:\DevDrive\ffmpeglib\library;$(LibraryPath)</LibraryPath>
+    <TargetExt>.ax</TargetExt>
+    <TargetName>DCVirtualCamera</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir)RTSP Source Filter\Common\DirectShow;$(SolutionDir)live\BasicUsageEnvironment\include;$(SolutionDir)live\UsageEnvironment\include;$(SolutionDir)live\groupsock\include;$(SolutionDir)live\liveMedia\include;$(SolutionDir)ffmpeg\include\;$(SolutionDir)LiveProxy;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;PUSHSOURCE_EXPORTS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>Default</CompileAs>
+      <ShowIncludes>false</ShowIncludes>
+      <AdditionalUsingDirectories>%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <CompileAsManaged>false</CompileAsManaged>
+      <ExceptionHandling>Sync</ExceptionHandling>
+    </ClCompile>
+    <Link>
+      <RegisterOutput>true</RegisterOutput>
+      <AdditionalDependencies>strmbasd.lib;winmm.lib;avcodec.lib;avformat.lib;avfilter.lib;avdevice.lib;avutil.lib;swscale.lib;swresample.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ShowProgress>NotSet</ShowProgress>
+      <OutputFile>$(OutDir)DCVirtualCamera.ax</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <ModuleDefinitionFile>VirtualCamera.def</ModuleDefinitionFile>
+      <ForceSymbolReferences>__DllMainCRTStartup%4012;%(ForceSymbolReferences)</ForceSymbolReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AssemblyDebug>true</AssemblyDebug>
+      <SubSystem>Windows</SubSystem>
+      <StackReserveSize>3000000</StackReserveSize>
+      <BaseAddress>0x0D900000</BaseAddress>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <FixedBaseAddress>false</FixedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>NotSet</TargetMachine>
+      <ProgramDatabaseFile>$(OutDir)HamedVirtualCamera.pdb</ProgramDatabaseFile>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <AdditionalOptions>/FORCE:MULTIPLE %(AdditionalOptions)</AdditionalOptions>
+      <PerUserRedirection>false</PerUserRedirection>
+    </Link>
+    <PostBuildEvent>
+      <Command>regsvr32 "$(OutDir)DCVirtualCamera.ax" /s</Command>
+    </PostBuildEvent>
+    <PreLinkEvent>
+      <Command>
+      </Command>
+    </PreLinkEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_USRDLL;_LIB;W7;PX;A6;T7;DECODE_INTEL;_CRT_SECURE_NO_DEPRECATE;PUSHSOURCE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+    </ClCompile>
+    <Link>
+      <RegisterOutput>true</RegisterOutput>
+      <AdditionalDependencies>LiveProxy.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)RTSPSource.ax</OutputFile>
+      <AdditionalLibraryDirectories>$(SolutionDir)RTSP Source Filter\Common\libs;$(SolutionDir)ffmpeg\lib;$(SolutionDir)live\lib;$(SolutionDir)LiveProxy\bin\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <ModuleDefinitionFile>PushSource.def</ModuleDefinitionFile>
+      <ForceSymbolReferences>__DllMainCRTStartup%4012;%(ForceSymbolReferences)</ForceSymbolReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>false</OptimizeReferences>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
+      <RandomizedBaseAddress />
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>regsvr32 "$(OutDir)RTSPSource.ax" /s</Command>
+    </PostBuildEvent>
+    <PreLinkEvent>
+      <Command>copy "$(SolutionDir)LiveProxy\bin\Release\*.dll" "$(OutDir)"
+copy "$(SolutionDir)ffmpeg\bin\*.dll" "$(OutDir)"
+</Command>
+    </PreLinkEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="setup.cpp" />
+    <ClCompile Include="VirtualCamera.cpp" />
+    <ClCompile Include="VirtualCameraPin.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="VirtualCamera.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Logger.h" />
+    <ClInclude Include="PushGuids.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="VirtualCamera.h" />
+    <ClInclude Include="VirtualCameraPin.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="VirtualCamera.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties Notes="&lt;Notes Project=&quot;39469123-3eb7-45f3-a15b-3854dfd2c2eb&quot; xmlns=&quot;clr-namespace:StickyNotes.Model;assembly=StickyNotes&quot;&gt;&lt;Notes.StickyNotes&gt;&lt;Note FilePath=&quot;&quot; Content=&quot;&quot; Date=&quot;2008-10-21T13:52:27.7721388-04:00&quot; /&gt;&lt;/Notes.StickyNotes&gt;&lt;/Notes&gt;" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
