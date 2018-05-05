@@ -71,5 +71,6 @@
     <None Include="VirtualCamera.def">
       <Filter>Source Files</Filter>
     </None>
+    <None Include="README.md" />
   </ItemGroup>
 </Project>

@@ -152,6 +152,7 @@ copy "$(SolutionDir)ffmpeg\bin\*.dll" "$(OutDir)"
     <ClCompile Include="VirtualCameraPin.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="README.md" />
     <None Include="VirtualCamera.def" />
   </ItemGroup>
   <ItemGroup>
